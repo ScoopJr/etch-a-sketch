@@ -14,13 +14,20 @@
 <body>
     <div class="flex-container">
         <div class="title"><h1>Etch a Sketch Pad</h1></div>
+        <p>Click to start sketching. Click again to stop sketching.</p>
         <div class="content">
             <div class="pad"></div>
             <div class="buttons">
-                <button>Original</button>
-                <button>Reverse</button>
-                <button>Rainbow</button>
-                <button>Clear</button>
+                <p>Chose your colour by clicking the desired button.</p>
+                <button onclick="changeColour('black')">Original</button>
+                <button onclick="changeColour('white')">Reverse</button>
+                <button onclick="changeColour('grey')">Grey</button>
+                <button onclick="changeColour('red')">Red</button>
+                <button onclick="changeColour('blue')">Blue</button>
+                <button onclick="changeColour('green')">Green</button>
+                <button onclick="changeColour('yellow')">Yellow</button>
+                <button onclick="changeColour('random')">Rainbow</button>
+                <button onclick="clearPad()">Clear</button>
             </div>
             <div>Enter a single number that represents both the number of columns / rows: 
                 <input type="text" placeholder="Size of sketch pad" value="16" onchange="changePadSize(this.value)" />
