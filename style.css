@@ -1,5 +1,155 @@
-.pad {
-    width: 500px;
-    height: 500px;
+.flex-container {
+    font-family: monospace;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgba(96, 79, 252, 0.082), white);
+  }
+
+  .pad {
+    width: 80%;
+    height: 80%;
     display: grid;
-}
+    background-color: white;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+      0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+  }
+  .pad:hover {
+    cursor: pointer;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60vw;
+    height: 60vw;
+    max-width: 600px;
+    max-height: 600px;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+
+  span {
+    color: green;
+    font-weight: bold;
+  }
+
+  .buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .black-button {
+    background-color: black;
+    color: white;
+  }
+
+  .black-button:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .white-button {
+    background-color: white;
+    color: black;
+  }
+
+  .white-button:hover {
+    background-color: rgb(46, 46, 46);
+    color: white;
+  }
+
+  .grey-button {
+    background-color: rgba(128, 128, 128, 0.411);
+    color: black;
+  }
+
+  .grey-button:hover {
+    background-color: grey;
+    color: white;
+  }
+
+  .red-button {
+    background-color: rgba(231, 115, 115, 0.411);
+    color: black;
+  }
+
+  .red-button:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .blue-button {
+    background-color: rgba(67, 96, 224, 0.411);
+    color: black;
+  }
+
+  .blue-button:hover {
+    background-color: blue;
+    color: white;
+  }
+
+  .green-button {
+    background-color: rgba(115, 246, 176, 0.411);
+    color: black;
+  }
+
+  .green-button:hover {
+    background-color: green;
+    color: white;
+  }
+
+  .yellow-button {
+    background-color: rgba(236, 230, 124, 0.411);
+    color: black;
+  }
+
+  .yellow-button:hover {
+    background-color: yellow;
+    color: grey;
+  }
+
+  .random-button {
+    background: linear-gradient(0.25turn, rgb(131, 70, 70), rgb(74, 74, 136), rgb(54, 120, 54), rgb(125, 125, 62));
+    color: black;
+  }
+
+  .random-button:hover {
+    background: linear-gradient(0.25turn, red, blue, green, yellow);
+    color: white;
+  }
+
+  input {
+    width: 50px;
+  }
+  
+  .sketch-mode {
+    margin-bottom: 5px;
+  }
+
+  .error {
+    display: none;
+  }
