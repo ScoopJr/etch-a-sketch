@@ -14,25 +14,27 @@
 <body>
     <div class="flex-container">
         <div class="title"><h1>Etch a Sketch Pad</h1></div>
-        <p>Click to start sketching. Click again to stop sketching.</p>
+        <p>Mouse click to start sketching. Click again to stop sketching.</p>
+        <div class="sketch-mode">Ready to sketch: <span>Active</span></div>
         <div class="content">
             <div class="pad"></div>
             <div class="buttons">
                 <p>Chose your colour by clicking the desired button.</p>
-                <button onclick="changeColour('black')">Original</button>
-                <button onclick="changeColour('white')">Reverse</button>
-                <button onclick="changeColour('grey')">Grey</button>
-                <button onclick="changeColour('red')">Red</button>
-                <button onclick="changeColour('blue')">Blue</button>
-                <button onclick="changeColour('green')">Green</button>
-                <button onclick="changeColour('yellow')">Yellow</button>
-                <button onclick="changeColour('random')">Rainbow</button>
+                <button class="black-button" onclick="changeColour('black')">Black</button>
+                <button class="white-button" onclick="changeColour('white')">White</button>
+                <button class="grey-button" onclick="changeColour('grey')">Grey</button>
+                <button class="red-button" onclick="changeColour('red')">Red</button>
+                <button class="blue-button" onclick="changeColour('blue')">Blue</button>
+                <button class="green-button" onclick="changeColour('green')">Green</button>
+                <button class="yellow-button" onclick="changeColour('yellow')">Yellow</button>
+                <button class="random-button" onclick="changeColour('random')">Rainbow</button>
                 <button onclick="clearPad()">Clear</button>
             </div>
             <div>Enter a single number that represents both the number of columns / rows: 
                 <input type="text" placeholder="Size of sketch pad" value="16" onchange="changePadSize(this.value)" />
                 <button>Confirm size</button>
             </div>
+            <div class="error">Input must be between 1 and 100.</div>
         </div>
     </div>
 </body>

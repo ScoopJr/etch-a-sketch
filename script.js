@@ -23,10 +23,11 @@ function padSize(number) { // function to set the size of the sketch pad
 padSize(16);
 
 function changePadSize(input) { // function to change the size of the sketch pad
-    if (input >= 1 || input <= 100) { // user can input between 1 and 100 only /////////NEED TO RESOLVE ISSUE/////////
+    if (input >= 1 && input <= 100) { // user can only input between 1 and 100
+        document.querySelector(".error").style.display = "none";
         padSize(input);
     } else {
-        console.log("Please chose a size between 1 and 100.");
+        document.querySelector(".error").style.display = "flex";
     }
 }
 
@@ -50,6 +51,26 @@ function clearPad() {
     grids.forEach((div) => div.style.backgroundColor = 'white');
 }
 
-document.querySelector("body").addEventListener("click", () => { // event listener to assign click to true or false
-    click = !click;
-});
+/*document.querySelector("body").addEventListener("click", (e) => { // event listener to assign click to true or false
+    if (e.target.tagName != "BUTTON") { // only count click when not targeting a button
+        click = !click; 
+        if(click) {
+            document.querySelector('.sketch-mode').textContent = "Ready to sketch: Active";
+        } else {
+            document.querySelector('.sketch-mode').textContent = "Ready to sketch: Inactive"; 
+        }
+    }
+});*/
+
+document.querySelector("body").addEventListener("click", (e) => { // event listener to assign click to true or false
+    if (e.target.tagName != "BUTTON") { // only count click when not targeting a button
+      click = !click;
+      if (click) {
+        document.querySelector('.sketch-mode').innerHTML = 
+            "Ready to sketch: <span style='font-weight:bold; color:green;'>Active</span>";
+      } else {
+        document.querySelector('.sketch-mode').innerHTML = 
+            "Ready to sketch: <span style='font-weight:bold; color:red;'>Inactive</span>";
+      }
+    }
+  });
